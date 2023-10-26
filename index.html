@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="path-to-your-css-file.css">
+    <script src="https://kit.fontawesome.com/49878a5eb7.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/main.css">
+    <title>zoomit</title>
+</head>
+<body class="bg-custom-bodycolor text-custom-textcolor text-custom-font">
+    <header class="w-full h-auto">
+        <nav class="relative container mx-auto w-full h-auto">
+            <div class="flex items-center justify-between w-full h-auto">
+                <div class="pt-2 flex space-x-6  justify-center items-center">
+                    <img class="h-16 w-25" src="img/zoomitlogo1.png" alt="">
+                    <input type="text" class="h-12 pl-4" placeholder="ძებნა...">
+                </div>
+                <div id="header_section" class="flex space-x-6 text-custom-textcolor items-center">
+                    <a class="hover:text-custom-textcolorhover" href="#">მთავარი</a>
+                    <a class="hover:text-custom-textcolorhover" href="#">კატეგორიები</a>
+                    <a class="hover:text-custom-textcolorhover" href="#">გვერდები</a>
+
+                    
+                        <div class="flex gap-1">
+                            <a href="#" class="p-3 px-6 pt-2 text-white bg-custom-buttoncolor">რეგისტრაცია</a>
+                            <a href="#" class="p-3 px-6 pt-2 text-white bg-custom-buttoncolor">შესვლა</a>
+                        </div>
+                </div>
+                
+                <!-- responsive header -->
+                <button id="menu-btn" class="block hamburger lg:hidden focus:outline-none">
+                    <span class="hamburger-top"></span>
+                    <span class="hamburger-middle"></span>
+                    <span class="hamburger-bottom"></span>
+                </button>
+            </div>
+            <div class="md:hidden">
+                <div id="menu" class="absolute flex-col p-5 hidden self-end py-8 mt-10 space-y-6 font-bold bg-white sm:w-auto sm:self-center left-6 right-6 drop-shadow-md">
+                    <a href="#">მთავარი</a>
+                    <a href="#">კატეგორიები</a>
+                    <a href="#">გვერდები</a>
+                    <a href="#">Pricing</a>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+
+
+    <!-- main -->
+    <main class="w-full h-auto mt-7 mb-7">
+        <!-- filter -->
+
+        <section class="w-full h-auto mt-20">
+            <div class="">
+                <div class=" p-6 rounded">                    
+                    <div class="flex flex-wrap -mx-2 mb-4">
+                        <div class="w-1/3 px-2">
+                            <select id="category" class="w-full p-4 border rounded bg-transparent text-lg text-custom-filtercolor">
+                                <option class="text-custom-filtercolor p-5 w-full h-10" value="all">მომსახურების ტიპი</option>
+                                <option class="p-5 w-full h-10" value="category1">Category 1</option>
+                                <option value="category2">Category 2</option>
+                                <!-- Add more options here -->
+                            </select>
+                        </div>
+            
+                        <div class="w-1/3 px-2">
+                            <select id="category" class="w-full p-4 border rounded bg-transparent text-lg text-custom-filtercolor">
+                                <option class="text-custom-filtercolor p-5 w-full h-10" value="all">მომსახურების ტიპი</option>
+                                <option class="p-5 w-full h-10" value="category1">Category 1</option>
+                                <option value="category2">Category 2</option>
+                                <!-- Add more options here -->
+                            </select>
+                        </div>
+                        <div class="w-1/3 px-2">
+                            <select id="category" class="w-full p-4 border rounded bg-transparent text-lg text-custom-filtercolor">
+                                <option class="text-custom-filtercolor p-5 w-full h-10" value="all">მომსახურების ტიპი</option>
+                                <option class="p-5 w-full h-10" value="category1">Category 1</option>
+                                <option value="category2">Category 2</option>
+                                <!-- Add more options here -->
+                            </select>
+                        </div>
+                        <div class="w-1/3 h-auto flex justify-between mt-6   gap-1">
+                            <div class="mb-4 w-half h-auto">
+                                <input type="number" id="priceFrom" class="w-11/12 border rounded bg-transparent py-5 text-lg pl-5" placeholder="5₾">
+                            </div>
+                    
+                            <div class="mb-4 w-half h-auto ml-5">
+                                <input type="number" id="priceEnd" class="w-11/12 border rounded bg-transparent  py-5 text-lg pl-5 " placeholder="500₾">
+                            </div>
+                        </div>
+            
+                        <div class="w-1/3 px-2 mr-10">
+                            <div class="w-full border rounded bg-transparent text-lg text-custom-filtercolor mt-6">
+                                <input type="date" id="date" class="w-full p-4 border rounded bg-transparent text-lg text-custom-filtercolor">
+                            </div>
+                            
+                        </div>
+                        <div class=" px-2  text-center mt-8 button">
+                            <button class="w-full px-2 bg-custom-buttoncolor text-center text-white text-lg py-3">ძებნა</button>
+                        </div>
+                        
+                    </div>
+            
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- filter -->
+
+    <!-- zoom meet -->
+
+        <section class="w-full h-auto mt-14">
+            <div class="flex flex-col w-full h-auto justify-between text-custom-zoommeetcolor px-6 mt-20 gap-1">
+                <h1 class="text-4xl">აირჩიეთ თქვენთვის სასურველი ZOOM ჩართვა</h1>
+                <a href="" class="flex flex-row text-3xl"> როგორ დავჯავშნოთ <img class="w-10 h-10" src="/img/icons8-zoom-48.png" alt=""></a>
+            </div>
+            <div class="mt-12 grid gap-14 grid-cols-1 px-6 xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5">
+                <a href="">
+                    <div class="flex flex-col h-auto w-full bg-custom-zoommeetcardcolor py-12  text-custom-zoommeetcolortext-center justify-center items-center rounded-xl gap-5 text-custom-zoommeetcolor hover:text-white hover:bg-custom-zoommeetcolor">
+                        <h3 class="text-3xl   mt-3">სკოლა</h3>
+                        <div class="flex w-20 h-20 rounded-full bg-custom-buttonbgcolor justify-center items-center">
+                            <img class="w-1/2 h-1/2 " src="/img/teacher.svg" alt="">
+                        </div>
+                    </div>  
+                </a>
+                <a href="">
+                    <div class="flex flex-col h-auto w-full bg-custom-zoommeetcardcolor py-12  text-custom-zoommeetcolortext-center justify-center items-center rounded-xl gap-5 text-custom-zoommeetcolor hover:text-white hover:bg-custom-zoommeetcolor">
+                        <h3 class="text-3xl   mt-3">სკოლა</h3>
+                        <div class="flex w-20 h-20 rounded-full bg-custom-buttonbgcolor justify-center items-center">
+                            <img class="w-1/2 h-1/2 " src="/img/teacher.svg" alt="">
+                        </div>
+                    </div>  
+                </a>
+                <a href="">
+                    <div class="flex flex-col h-auto w-full bg-custom-zoommeetcardcolor py-12  text-custom-zoommeetcolortext-center justify-center items-center rounded-xl gap-5 text-custom-zoommeetcolor hover:text-white hover:bg-custom-zoommeetcolor">
+                        <h3 class="text-3xl   mt-3">სკოლა</h3>
+                        <div class="flex w-20 h-20 rounded-full bg-custom-buttonbgcolor justify-center items-center">
+                            <img class="w-1/2 h-1/2 " src="/img/teacher.svg" alt="">
+                        </div>
+                    </div>  
+                </a>
+                <a href="">
+                    <div class="flex flex-col h-auto w-full bg-custom-zoommeetcardcolor py-12  text-custom-zoommeetcolortext-center justify-center items-center rounded-xl gap-5 text-custom-zoommeetcolor hover:text-white hover:bg-custom-zoommeetcolor">
+                        <h3 class="text-3xl   mt-3">სკოლა</h3>
+                        <div class="flex w-20 h-20 rounded-full bg-custom-buttonbgcolor justify-center items-center">
+                            <img class="w-1/2 h-1/2 " src="/img/teacher.svg" alt="">
+                        </div>
+                    </div>  
+                </a>
+                <a href="">
+                    <div class="flex flex-col h-auto w-full bg-custom-zoommeetcardcolor py-12  text-custom-zoommeetcolortext-center justify-center items-center rounded-xl gap-5 text-custom-zoommeetcolor hover:text-white hover:bg-custom-zoommeetcolor">
+                        <h3 class="text-3xl   mt-3">სკოლა</h3>
+                        <div class="flex w-20 h-20 rounded-full bg-custom-buttonbgcolor justify-center items-center">
+                            <img class="w-1/2 h-1/2 " src="/img/teacher.svg" alt="">
+                        </div>
+                    </div>  
+                </a>
+                <a href="">
+                    <div class="flex flex-col h-auto w-full bg-custom-zoommeetcardcolor py-12  text-custom-zoommeetcolortext-center justify-center items-center rounded-xl gap-5 text-custom-zoommeetcolor hover:text-white hover:bg-custom-zoommeetcolor">
+                        <h3 class="text-3xl   mt-3">სკოლა</h3>
+                        <div class="flex w-20 h-20 rounded-full bg-custom-buttonbgcolor justify-center items-center">
+                            <img class="w-1/2 h-1/2 " src="/img/teacher.svg" alt="">
+                        </div>
+                    </div>  
+                </a>
+
+            </div>
+           
+            
+        </section>
+
+
+    <!-- zoom meet -->
+
+    <!-- subejects -->
+        <div class="flex flex-row w-full h-auto justify-between text-custom-zoommeetcolor px-6 mt-20">
+            <h1 class="text-3xl">ყველაზე მოთხოვნადი სკოლის საგნები</h1>
+            <button class="bg-custom-buttoncolor text-white p-5 text-base">ყველას ნახვა</button>
+        </div>
+        <section class="mt-10 grid gap-5 grid-cols-1 px-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5">
+            <div class="flex flex-col h-auto w-full bg-white pb-4 transform relative hover:bottom-3 transition-transform duration-1000 ease-in-out">
+                <a href="">
+                    <figure class="w-full h-2/3">
+                        <img src="img/pg-35-napoleon-1-dea-getty.webp" alt="" class="w-full h-full">
+                    </figure>
+                    <div class="flex flex-col">
+                        <div class="h-auto w-full flex flex-row">
+                            <div class="flex p-2 m-3 w-15 h-9 text-center text-sm justify-center text-custom-buttoncolor bg-custom-buttonbgcolor hover:bg-custom-buttoncolor hover:text-white">
+                                <p>მათემატიკა</p>
+                            </div>
+                        </div>
+                        <h3 class="text-custom-zoommeetcolor ml-4 text-sm"> V-XII კლასი </h3>
+                        <div class=" flex flex-row w-full h-auto justify-between ">
+                            <div class="flex flex-row w-half h-auto gap-2 justify-center items-center text-center ml-4 mt-2">
+                                <i class="fa-regular fa-clock fa-sm text-custom-buttoncolor"></i>
+                                <span class="text-xs text-slate-600">45 წთ</span>
+                                <p class="text-sm text-custom-buttoncolor">16.00₾</p>
+                            </div>
+                            <div class="flex flex-row w-half h-auto gap-2 justify-center items-center text-center pr-4 mt-2 "> 
+                                <i class="fa-regular fa-clock fa-sm text-custom-buttoncolor"></i>
+                                <span class="text-xs text-slate-600">90 წთ</span>
+                                <p class="text-sm text-custom-buttoncolor">25.00₾</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex flex-row w-full h-auto justify-between mt-3">
+                            <div class="flex flex-row w-2/3 h-auto gap-2 justify-center items-center text-center "> 
+                                <figure class="w-10 h-10 rounded-full border-b border-custom-buttoncolor">
+                                    <img class="w-full h-full rounded-full" src="img/pg-35-napoleon-1-dea-getty.webp" alt="">
+                                </figure>
+                                <p class="text-xs text-custom-buttoncolor">ნაპოლეონ ბონაპარტი</p>
+                            </div>
+                            <div class="flex flex-row w-1/3 h-auto justify-center items-center text-center gap-2">
+                                <i class="fa-solid fa-star fa-sm text-custom-starcolor" ></i>
+                                <span> 0 (0) </span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="flex flex-col h-auto w-full bg-white pb-4 transform relative hover:bottom-3 transition-transform duration-1000 ease-in-out">
+                <a href="">
+                    <figure class="w-full h-2/3">
+                        <img src="img/pg-35-napoleon-1-dea-getty.webp" alt="" class="w-full h-full">
+                    </figure>
+                    <div class="flex flex-col">
+                        <div class="h-auto w-full flex flex-row">
+                            <div class="flex p-2 m-3 w-15 h-9 text-center text-sm justify-center text-custom-buttoncolor bg-custom-buttonbgcolor hover:bg-custom-buttoncolor hover:text-white">
+                                <p>მათემატიკა</p>
+                            </div>
+                        </div>
+                        <h3 class="text-custom-zoommeetcolor ml-4 text-sm"> V-XII კლასი </h3>
+                        <div class=" flex flex-row w-full h-auto justify-between ">
+                            <div class="flex flex-row w-half h-auto gap-2 justify-center items-center text-center ml-4 mt-2">
+                                <i class="fa-regular fa-clock fa-sm text-custom-buttoncolor"></i>
+                                <span class="text-xs text-slate-600">45 წთ</span>
+                                <p class="text-sm text-custom-buttoncolor">16.00₾</p>
+                            </div>
+                            <div class="flex flex-row w-half h-auto gap-2 justify-center items-center text-center pr-4 mt-2 "> 
+                                <i class="fa-regular fa-clock fa-sm text-custom-buttoncolor"></i>
+                                <span class="text-xs text-slate-600">90 წთ</span>
+                                <p class="text-sm text-custom-buttoncolor">25.00₾</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex flex-row w-full h-auto justify-between mt-3">
+                            <div class="flex flex-row w-2/3 h-auto gap-2 justify-center items-center text-center "> 
+                                <figure class="w-10 h-10 rounded-full border-b border-custom-buttoncolor">
+                                    <img class="w-full h-full rounded-full" src="img/pg-35-napoleon-1-dea-getty.webp" alt="">
+                                </figure>
+                                <p class="text-xs text-custom-buttoncolor">ნაპოლეონ ბონაპარტი</p>
+                            </div>
+                            <div class="flex flex-row w-1/3 h-auto justify-center items-center text-center gap-2">
+                                <i class="fa-solid fa-star fa-sm text-custom-starcolor" ></i>
+                                <span> 0 (0) </span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="flex flex-col h-auto w-full bg-white pb-4 transform relative hover:bottom-3 transition-transform duration-1000 ease-in-out">
+                <a href="">
+                    <figure class="w-full h-2/3">
+                        <img src="img/pg-35-napoleon-1-dea-getty.webp" alt="" class="w-full h-full">
+                    </figure>
+                    <div class="flex flex-col">
+                        <div class="h-auto w-full flex flex-row">
+                            <div class="flex p-2 m-3 w-15 h-9 text-center text-sm justify-center text-custom-buttoncolor bg-custom-buttonbgcolor hover:bg-custom-buttoncolor hover:text-white">
+                                <p>მათემატიკა</p>
+                            </div>
+                        </div>
+                        <h3 class="text-custom-zoommeetcolor ml-4 text-sm"> V-XII კლასი </h3>
+                        <div class=" flex flex-row w-full h-auto justify-between ">
+                            <div class="flex flex-row w-half h-auto gap-2 justify-center items-center text-center ml-4 mt-2">
+                                <i class="fa-regular fa-clock fa-sm text-custom-buttoncolor"></i>
+                                <span class="text-xs text-slate-600">45 წთ</span>
+                                <p class="text-sm text-custom-buttoncolor">16.00₾</p>
+                            </div>
+                            <div class="flex flex-row w-half h-auto gap-2 justify-center items-center text-center pr-4 mt-2 "> 
+                                <i class="fa-regular fa-clock fa-sm text-custom-buttoncolor"></i>
+                                <span class="text-xs text-slate-600">90 წთ</span>
+                                <p class="text-sm text-custom-buttoncolor">25.00₾</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex flex-row w-full h-auto justify-between mt-3">
+                            <div class="flex flex-row w-2/3 h-auto gap-2 justify-center items-center text-center "> 
+                                <figure class="w-10 h-10 rounded-full border-b border-custom-buttoncolor">
+                                    <img class="w-full h-full rounded-full" src="img/pg-35-napoleon-1-dea-getty.webp" alt="">
+                                </figure>
+                                <p class="text-xs text-custom-buttoncolor">ნაპოლეონ ბონაპარტი</p>
+                            </div>
+                            <div class="flex flex-row w-1/3 h-auto justify-center items-center text-center gap-2">
+                                <i class="fa-solid fa-star fa-sm text-custom-starcolor" ></i>
+                                <span> 0 (0) </span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="flex flex-col h-auto w-full bg-white pb-4 transform relative hover:bottom-3 transition-transform duration-1000 ease-in-out">
+                <a href="">
+                    <figure class="w-full h-2/3">
+                        <img src="img/pg-35-napoleon-1-dea-getty.webp" alt="" class="w-full h-full">
+                    </figure>
+                    <div class="flex flex-col">
+                        <div class="h-auto w-full flex flex-row">
+                            <div class="flex p-2 m-3 w-15 h-9 text-center text-sm justify-center text-custom-buttoncolor bg-custom-buttonbgcolor hover:bg-custom-buttoncolor hover:text-white">
+                                <p>მათემატიკა</p>
+                            </div>
+                        </div>
+                        <h3 class="text-custom-zoommeetcolor ml-4 text-sm"> V-XII კლასი </h3>
+                        <div class=" flex flex-row w-full h-auto justify-between ">
+                            <div class="flex flex-row w-half h-auto gap-2 justify-center items-center text-center ml-4 mt-2">
+                                <i class="fa-regular fa-clock fa-sm text-custom-buttoncolor"></i>
+                                <span class="text-xs text-slate-600">45 წთ</span>
+                                <p class="text-sm text-custom-buttoncolor">16.00₾</p>
+                            </div>
+                            <div class="flex flex-row w-half h-auto gap-2 justify-center items-center text-center pr-4 mt-2 "> 
+                                <i class="fa-regular fa-clock fa-sm text-custom-buttoncolor"></i>
+                                <span class="text-xs text-slate-600">90 წთ</span>
+                                <p class="text-sm text-custom-buttoncolor">25.00₾</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex flex-row w-full h-auto justify-between mt-3">
+                            <div class="flex flex-row w-2/3 h-auto gap-2 justify-center items-center text-center "> 
+                                <figure class="w-10 h-10 rounded-full border-b border-custom-buttoncolor">
+                                    <img class="w-full h-full rounded-full" src="img/pg-35-napoleon-1-dea-getty.webp" alt="">
+                                </figure>
+                                <p class="text-xs text-custom-buttoncolor">ნაპოლეონ ბონაპარტი</p>
+                            </div>
+                            <div class="flex flex-row w-1/3 h-auto justify-center items-center text-center gap-2">
+                                <i class="fa-solid fa-star fa-sm text-custom-starcolor" ></i>
+                                <span> 0 (0) </span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="flex flex-col h-auto w-full bg-white pb-4 transform relative hover:bottom-3 transition-transform duration-1000 ease-in-out">
+                <a href="">
+                    <figure class="w-full h-2/3">
+                        <img src="img/pg-35-napoleon-1-dea-getty.webp" alt="" class="w-full h-full">
+                    </figure>
+                    <div class="flex flex-col">
+                        <div class="h-auto w-full flex flex-row">
+                            <div class="flex p-2 m-3 w-15 h-9 text-center text-sm justify-center text-custom-buttoncolor bg-custom-buttonbgcolor hover:bg-custom-buttoncolor hover:text-white">
+                                <p>მათემატიკა</p>
+                            </div>
+                        </div>
+                        <h3 class="text-custom-zoommeetcolor ml-4 text-sm"> V-XII კლასი </h3>
+                        <div class=" flex flex-row w-full h-auto justify-between ">
+                            <div class="flex flex-row w-half h-auto gap-2 justify-center items-center text-center ml-4 mt-2">
+                                <i class="fa-regular fa-clock fa-sm text-custom-buttoncolor"></i>
+                                <span class="text-xs text-slate-600">45 წთ</span>
+                                <p class="text-sm text-custom-buttoncolor">16.00₾</p>
+                            </div>
+                            <div class="flex flex-row w-half h-auto gap-2 justify-center items-center text-center pr-4 mt-2 "> 
+                                <i class="fa-regular fa-clock fa-sm text-custom-buttoncolor"></i>
+                                <span class="text-xs text-slate-600">90 წთ</span>
+                                <p class="text-sm text-custom-buttoncolor">25.00₾</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex flex-row w-full h-auto justify-between mt-3">
+                            <div class="flex flex-row w-2/3 h-auto gap-2 justify-center items-center text-center "> 
+                                <figure class="w-10 h-10 rounded-full border-b border-custom-buttoncolor">
+                                    <img class="w-full h-full rounded-full" src="img/pg-35-napoleon-1-dea-getty.webp" alt="">
+                                </figure>
+                                <p class="text-xs text-custom-buttoncolor">ნაპოლეონ ბონაპარტი</p>
+                            </div>
+                            <div class="flex flex-row w-1/3 h-auto justify-center items-center text-center gap-2">
+                                <i class="fa-solid fa-star fa-sm text-custom-starcolor" ></i>
+                                <span> 0 (0) </span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="flex flex-col h-auto w-full bg-white pb-4 transform relative hover:bottom-3 transition-transform duration-1000 ease-in-out">
+                <a href="">
+                    <figure class="w-full h-2/3">
+                        <img src="img/pg-35-napoleon-1-dea-getty.webp" alt="" class="w-full h-full">
+                    </figure>
+                    <div class="flex flex-col">
+                        <div class="h-auto w-full flex flex-row">
+                            <div class="flex p-2 m-3 w-15 h-9 text-center text-sm justify-center text-custom-buttoncolor bg-custom-buttonbgcolor hover:bg-custom-buttoncolor hover:text-white">
+                                <p>მათემატიკა</p>
+                            </div>
+                        </div>
+                        <h3 class="text-custom-zoommeetcolor ml-4 text-sm"> V-XII კლასი </h3>
+                        <div class=" flex flex-row w-full h-auto justify-between ">
+                            <div class="flex flex-row w-half h-auto gap-2 justify-center items-center text-center ml-4 mt-2">
+                                <i class="fa-regular fa-clock fa-sm text-custom-buttoncolor"></i>
+                                <span class="text-xs text-slate-600">45 წთ</span>
+                                <p class="text-sm text-custom-buttoncolor">16.00₾</p>
+                            </div>
+                            <div class="flex flex-row w-half h-auto gap-2 justify-center items-center text-center pr-4 mt-2 "> 
+                                <i class="fa-regular fa-clock fa-sm text-custom-buttoncolor"></i>
+                                <span class="text-xs text-slate-600">90 წთ</span>
+                                <p class="text-sm text-custom-buttoncolor">25.00₾</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex flex-row w-full h-auto justify-between mt-3">
+                            <div class="flex flex-row w-2/3 h-auto gap-2 justify-center items-center text-center "> 
+                                <figure class="w-10 h-10 rounded-full border-b border-custom-buttoncolor">
+                                    <img class="w-full h-full rounded-full" src="img/pg-35-napoleon-1-dea-getty.webp" alt="">
+                                </figure>
+                                <p class="text-xs text-custom-buttoncolor">ნაპოლეონ ბონაპარტი</p>
+                            </div>
+                            <div class="flex flex-row w-1/3 h-auto justify-center items-center text-center gap-2">
+                                <i class="fa-solid fa-star fa-sm text-custom-starcolor" ></i>
+                                <span> 0 (0) </span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+        </section>
+    <!-- /subejects -->
+    <!--zoommeet-->
+
+    <div class="flex flex-row w-full h-auto justify-between text-custom-zoommeetcolor px-6 mt-20">
+        <h1 class="text-3xl">ყველაზე მოთხოვნადი ZOOM ჩართვები</h1>
+        <button class="bg-custom-buttoncolor text-white p-5 text-base">ყველას ნახვა</button>
+    </div>
+    <section class="mt-10 grid gap-5 grid-cols-1 px-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5">
+        <div class="flex flex-col h-auto w-full bg-white pb-4 transform relative hover:bottom-3 transition-transform duration-1000 ease-in-out">
+            <a href="">
+                <figure class="w-full h-2/3">
+                    <img src="img/pg-35-napoleon-1-dea-getty.webp" alt="" class="w-full h-full">
+                </figure>
+                <div class="flex flex-col">
+                    <div class="h-auto w-full flex flex-row">
+                        <div class="flex p-2 m-3 w-15 h-9 text-center text-sm justify-center text-custom-buttoncolor bg-custom-buttonbgcolor hover:bg-custom-buttoncolor hover:text-white">
+                            <p> ბუღალტერია და გადასახადები </p>
+                        </div>
+                    </div>
+                    <h3 class="text-custom-zoommeetcolor ml-4 text-sm"> V-XII კლასი </h3>
+                    <div class=" flex flex-row w-full h-auto justify-between ">
+                        <div class="flex flex-row w-half h-auto gap-2 justify-center items-center text-center ml-4 mt-2">
+                            <i class="fa-regular fa-clock fa-sm text-custom-buttoncolor"></i>
+                            <span class="text-xs text-slate-600">45 წთ</span>
+                            <p class="text-sm text-custom-buttoncolor">30.00₾</p>
+                        </div>
+                        <div class="flex flex-row w-half h-auto gap-2 justify-center items-center text-center pr-4 mt-2 "> 
+                            <i class="fa-regular fa-clock fa-sm text-custom-buttoncolor"></i>
+                            <span class="text-xs text-slate-600">90 წთ</span>
+                            <p class="text-sm text-custom-buttoncolor">50.00₾</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex flex-row w-full h-auto justify-between mt-3">
+                        <div class="flex flex-row w-2/3 h-auto gap-2 justify-center items-center text-center "> 
+                            <figure class="w-10 h-10 rounded-full border-b border-custom-buttoncolor">
+                                <img class="w-full h-full rounded-full" src="img/pg-35-napoleon-1-dea-getty.webp" alt="">
+                            </figure>
+                            <p class="text-xs text-custom-buttoncolor">ნაპოლეონ ბონაპარტი</p>
+                        </div>
+                        <div class="flex flex-row w-1/3 h-auto justify-center items-center text-center gap-2">
+                            <i class="fa-solid fa-star fa-sm text-custom-starcolor" ></i>
+                            <span> 0 (0) </span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="flex flex-col h-auto w-full bg-white pb-4 transform relative hover:bottom-3 transition-transform duration-1000 ease-in-out">
+            <a href="">
+                <figure class="w-full h-2/3">
+                    <img src="img/pg-35-napoleon-1-dea-getty.webp" alt="" class="w-full h-full">
+                </figure>
+                <div class="flex flex-col">
+                    <div class="h-auto w-full flex flex-row">
+                        <div class="flex p-2 m-3 w-15 h-9 text-center text-sm justify-center text-custom-buttoncolor bg-custom-buttonbgcolor hover:bg-custom-buttoncolor hover:text-white">
+                            <p>მათემატიკა</p>
+                        </div>
+                    </div>
+                    <h3 class="text-custom-zoommeetcolor ml-4 text-sm"> V-XII კლასი </h3>
+                    <div class=" flex flex-row w-full h-auto justify-between ">
+                        <div class="flex flex-row w-half h-auto gap-2 justify-center items-center text-center ml-4 mt-2">
+                            <i class="fa-regular fa-clock fa-sm text-custom-buttoncolor"></i>
+                            <span class="text-xs text-slate-600">45 წთ</span>
+                            <p class="text-sm text-custom-buttoncolor">16.00₾</p>
+                        </div>
+                        <div class="flex flex-row w-half h-auto gap-2 justify-center items-center text-center pr-4 mt-2 "> 
+                            <i class="fa-regular fa-clock fa-sm text-custom-buttoncolor"></i>
+                            <span class="text-xs text-slate-600">90 წთ</span>
+                            <p class="text-sm text-custom-buttoncolor">25.00₾</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex flex-row w-full h-auto justify-between mt-3">
+                        <div class="flex flex-row w-2/3 h-auto gap-2 justify-center items-center text-center "> 
+                            <figure class="w-10 h-10 rounded-full border-b border-custom-buttoncolor">
+                                <img class="w-full h-full rounded-full" src="img/pg-35-napoleon-1-dea-getty.webp" alt="">
+                            </figure>
+                            <p class="text-xs text-custom-buttoncolor">ნაპოლეონ ბონაპარტი</p>
+                        </div>
+                        <div class="flex flex-row w-1/3 h-auto justify-center items-center text-center gap-2">
+                            <i class="fa-solid fa-star fa-sm text-custom-starcolor" ></i>
+                            <span> 0 (0) </span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="flex flex-col h-auto w-full bg-white pb-4 transform relative hover:bottom-3 transition-transform duration-1000 ease-in-out">
+            <a href="">
+                <figure class="w-full h-2/3">
+                    <img src="img/pg-35-napoleon-1-dea-getty.webp" alt="" class="w-full h-full">
+                </figure>
+                <div class="flex flex-col">
+                    <div class="h-auto w-full flex flex-row">
+                        <div class="flex p-2 m-3 w-15 h-9 text-center text-sm justify-center text-custom-buttoncolor bg-custom-buttonbgcolor hover:bg-custom-buttoncolor hover:text-white">
+                            <p>მათემატიკა</p>
+                        </div>
+                    </div>
+                    <h3 class="text-custom-zoommeetcolor ml-4 text-sm"> V-XII კლასი </h3>
+                    <div class=" flex flex-row w-full h-auto justify-between ">
+                        <div class="flex flex-row w-half h-auto gap-2 justify-center items-center text-center ml-4 mt-2">
+                            <i class="fa-regular fa-clock fa-sm text-custom-buttoncolor"></i>
+                            <span class="text-xs text-slate-600">45 წთ</span>
+                            <p class="text-sm text-custom-buttoncolor">16.00₾</p>
+                        </div>
+                        <div class="flex flex-row w-half h-auto gap-2 justify-center items-center text-center pr-4 mt-2 "> 
+                            <i class="fa-regular fa-clock fa-sm text-custom-buttoncolor"></i>
+                            <span class="text-xs text-slate-600">90 წთ</span>
+                            <p class="text-sm text-custom-buttoncolor">25.00₾</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex flex-row w-full h-auto justify-between mt-3">
+                        <div class="flex flex-row w-2/3 h-auto gap-2 justify-center items-center text-center "> 
+                            <figure class="w-10 h-10 rounded-full border-b border-custom-buttoncolor">
+                                <img class="w-full h-full rounded-full" src="img/pg-35-napoleon-1-dea-getty.webp" alt="">
+                            </figure>
+                            <p class="text-xs text-custom-buttoncolor">ნაპოლეონ ბონაპარტი</p>
+                        </div>
+                        <div class="flex flex-row w-1/3 h-auto justify-center items-center text-center gap-2">
+                            <i class="fa-solid fa-star fa-sm text-custom-starcolor" ></i>
+                            <span> 0 (0) </span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="flex flex-col h-auto w-full bg-white pb-4 transform relative hover:bottom-3 transition-transform duration-1000 ease-in-out">
+            <a href="">
+                <figure class="w-full h-2/3">
+                    <img src="img/pg-35-napoleon-1-dea-getty.webp" alt="" class="w-full h-full">
+                </figure>
+                <div class="flex flex-col">
+                    <div class="h-auto w-full flex flex-row">
+                        <div class="flex p-2 m-3 w-15 h-9 text-center text-sm justify-center text-custom-buttoncolor bg-custom-buttonbgcolor hover:bg-custom-buttoncolor hover:text-white">
+                            <p>მათემატიკა</p>
+                        </div>
+                    </div>
+                    <h3 class="text-custom-zoommeetcolor ml-4 text-sm"> V-XII კლასი </h3>
+                    <div class=" flex flex-row w-full h-auto justify-between ">
+                        <div class="flex flex-row w-half h-auto gap-2 justify-center items-center text-center ml-4 mt-2">
+                            <i class="fa-regular fa-clock fa-sm text-custom-buttoncolor"></i>
+                            <span class="text-xs text-slate-600">45 წთ</span>
+                            <p class="text-sm text-custom-buttoncolor">16.00₾</p>
+                        </div>
+                        <div class="flex flex-row w-half h-auto gap-2 justify-center items-center text-center pr-4 mt-2 "> 
+                            <i class="fa-regular fa-clock fa-sm text-custom-buttoncolor"></i>
+                            <span class="text-xs text-slate-600">90 წთ</span>
+                            <p class="text-sm text-custom-buttoncolor">25.00₾</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex flex-row w-full h-auto justify-between mt-3">
+                        <div class="flex flex-row w-2/3 h-auto gap-2 justify-center items-center text-center "> 
+                            <figure class="w-10 h-10 rounded-full border-b border-custom-buttoncolor">
+                                <img class="w-full h-full rounded-full" src="img/pg-35-napoleon-1-dea-getty.webp" alt="">
+                            </figure>
+                            <p class="text-xs text-custom-buttoncolor">ნაპოლეონ ბონაპარტი</p>
+                        </div>
+                        <div class="flex flex-row w-1/3 h-auto justify-center items-center text-center gap-2">
+                            <i class="fa-solid fa-star fa-sm text-custom-starcolor" ></i>
+                            <span> 0 (0) </span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="flex flex-col h-auto w-full bg-white pb-4 transform relative hover:bottom-3 transition-transform duration-1000 ease-in-out">
+            <a href="">
+                <figure class="w-full h-2/3">
+                    <img src="img/pg-35-napoleon-1-dea-getty.webp" alt="" class="w-full h-full">
+                </figure>
+                <div class="flex flex-col">
+                    <div class="h-auto w-full flex flex-row">
+                        <div class="flex p-2 m-3 w-15 h-9 text-center text-sm justify-center text-custom-buttoncolor bg-custom-buttonbgcolor hover:bg-custom-buttoncolor hover:text-white">
+                            <p>მათემატიკა</p>
+                        </div>
+                    </div>
+                    <h3 class="text-custom-zoommeetcolor ml-4 text-sm"> V-XII კლასი </h3>
+                    <div class=" flex flex-row w-full h-auto justify-between ">
+                        <div class="flex flex-row w-half h-auto gap-2 justify-center items-center text-center ml-4 mt-2">
+                            <i class="fa-regular fa-clock fa-sm text-custom-buttoncolor"></i>
+                            <span class="text-xs text-slate-600">45 წთ</span>
+                            <p class="text-sm text-custom-buttoncolor">16.00₾</p>
+                        </div>
+                        <div class="flex flex-row w-half h-auto gap-2 justify-center items-center text-center pr-4 mt-2 "> 
+                            <i class="fa-regular fa-clock fa-sm text-custom-buttoncolor"></i>
+                            <span class="text-xs text-slate-600">90 წთ</span>
+                            <p class="text-sm text-custom-buttoncolor">25.00₾</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex flex-row w-full h-auto justify-between mt-3">
+                        <div class="flex flex-row w-2/3 h-auto gap-2 justify-center items-center text-center "> 
+                            <figure class="w-10 h-10 rounded-full border-b border-custom-buttoncolor">
+                                <img class="w-full h-full rounded-full" src="img/pg-35-napoleon-1-dea-getty.webp" alt="">
+                            </figure>
+                            <p class="text-xs text-custom-buttoncolor">ნაპოლეონ ბონაპარტი</p>
+                        </div>
+                        <div class="flex flex-row w-1/3 h-auto justify-center items-center text-center gap-2">
+                            <i class="fa-solid fa-star fa-sm text-custom-starcolor" ></i>
+                            <span> 0 (0) </span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="flex flex-col h-auto w-full bg-white pb-4 transform relative hover:bottom-3 transition-transform duration-1000 ease-in-out">
+            <a href="">
+                <figure class="w-full h-2/3">
+                    <img src="img/pg-35-napoleon-1-dea-getty.webp" alt="" class="w-full h-full">
+                </figure>
+                <div class="flex flex-col">
+                    <div class="h-auto w-full flex flex-row">
+                        <div class="flex p-2 m-3 w-15 h-9 text-center text-sm justify-center text-custom-buttoncolor bg-custom-buttonbgcolor hover:bg-custom-buttoncolor hover:text-white">
+                            <p>მათემატიკა</p>
+                        </div>
+                    </div>
+                    <h3 class="text-custom-zoommeetcolor ml-4 text-sm"> V-XII კლასი </h3>
+                    <div class=" flex flex-row w-full h-auto justify-between ">
+                        <div class="flex flex-row w-half h-auto gap-2 justify-center items-center text-center ml-4 mt-2">
+                            <i class="fa-regular fa-clock fa-sm text-custom-buttoncolor"></i>
+                            <span class="text-xs text-slate-600">45 წთ</span>
+                            <p class="text-sm text-custom-buttoncolor">16.00₾</p>
+                        </div>
+                        <div class="flex flex-row w-half h-auto gap-2 justify-center items-center text-center pr-4 mt-2 "> 
+                            <i class="fa-regular fa-clock fa-sm text-custom-buttoncolor"></i>
+                            <span class="text-xs text-slate-600">90 წთ</span>
+                            <p class="text-sm text-custom-buttoncolor">25.00₾</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex flex-row w-full h-auto justify-between mt-3">
+                        <div class="flex flex-row w-2/3 h-auto gap-2 justify-center items-center text-center "> 
+                            <figure class="w-10 h-10 rounded-full border-b border-custom-buttoncolor">
+                                <img class="w-full h-full rounded-full" src="img/pg-35-napoleon-1-dea-getty.webp" alt="">
+                            </figure>
+                            <p class="text-xs text-custom-buttoncolor">ნაპოლეონ ბონაპარტი</p>
+                        </div>
+                        <div class="flex flex-row w-1/3 h-auto justify-center items-center text-center gap-2">
+                            <i class="fa-solid fa-star fa-sm text-custom-starcolor" ></i>
+                            <span> 0 (0) </span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+    </section>
+
+
+    <!--/zoommeet-->
+          
+    <!-- contact -->
+    <!-- contact -->
+
+
+    <div class="flex flex-row w-full h-auto justify-between text-custom-zoommeetcolor px-6 mt-20">
+        <h1 class="text-3xl">დაუკავშიდით პროფესიონალებს</h1>
+        <button class="bg-custom-buttoncolor text-white p-5 text-base">ყველას ნახვა</button>
+    </div>
+    <section class="mt-10 grid gap-5 grid-cols-1 px-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5">
+        <div class="flex flex-col h-auto w-full  pb-4 ">
+            <a href="">
+                <figure class="w-full h-2/3">
+                    <img src="img/napoleon-exile-gettyimages-1288489073.jpg" alt="" class="w-full h-full">
+                </figure>
+                <div class="flex flex-col text-center items-center gap-3">
+                    <h1 class="text-custom-zoommeetcolor ml-4 text-xl mt-4">აკაკი ჯალაბაძე</h1>
+                    
+                        <div class="flex flex-row w-1/3 h-auto justify-center items-center text-center gap-2">
+                            <i class="fa-solid fa-star fa-sm text-custom-starcolor" ></i>
+                            <span> 0 (0) </span>
+                        </div>
+                    <h2 class="text-custom-zoommeetcolor text-base">ბუღალტერია და გადასახადები</h2>
+                </div>
+            </a>
+        </div>
+        <div class="flex flex-col h-auto w-full  pb-4 ">
+            <a href="">
+                <figure class="w-full h-2/3">
+                    <img src="img/napoleon-exile-gettyimages-1288489073.jpg" alt="" class="w-full h-full">
+                </figure>
+                <div class="flex flex-col text-center items-center gap-3">
+                    <h1 class="text-custom-zoommeetcolor ml-4 text-xl mt-4">აკაკი ჯალაბაძე</h1>
+                    
+                        <div class="flex flex-row w-1/3 h-auto justify-center items-center text-center gap-2">
+                            <i class="fa-solid fa-star fa-sm text-custom-starcolor" ></i>
+                            <span> 0 (0) </span>
+                        </div>
+                    <h2 class="text-custom-zoommeetcolor text-base">ბუღალტერია და გადასახადები</h2>
+                </div>
+            </a>
+        </div>
+        <div class="flex flex-col h-auto w-full  pb-4 ">
+            <a href="">
+                <figure class="w-full h-2/3">
+                    <img src="img/napoleon-exile-gettyimages-1288489073.jpg" alt="" class="w-full h-full">
+                </figure>
+                <div class="flex flex-col text-center items-center gap-3">
+                    <h1 class="text-custom-zoommeetcolor ml-4 text-xl mt-4">აკაკი ჯალაბაძე</h1>
+                    
+                        <div class="flex flex-row w-1/3 h-auto justify-center items-center text-center gap-2">
+                            <i class="fa-solid fa-star fa-sm text-custom-starcolor" ></i>
+                            <span> 0 (0) </span>
+                        </div>
+                    <h2 class="text-custom-zoommeetcolor text-base">ბუღალტერია და გადასახადები</h2>
+                </div>
+            </a>
+        </div>
+        <div class="flex flex-col h-auto w-full  pb-4 ">
+            <a href="">
+                <figure class="w-full h-2/3">
+                    <img src="img/napoleon-exile-gettyimages-1288489073.jpg" alt="" class="w-full h-full">
+                </figure>
+                <div class="flex flex-col text-center items-center gap-3">
+                    <h1 class="text-custom-zoommeetcolor ml-4 text-xl mt-4">აკაკი ჯალაბაძე</h1>
+                    
+                        <div class="flex flex-row w-1/3 h-auto justify-center items-center text-center gap-2">
+                            <i class="fa-solid fa-star fa-sm text-custom-starcolor" ></i>
+                            <span> 0 (0) </span>
+                        </div>
+                    <h2 class="text-custom-zoommeetcolor text-base">ბუღალტერია და გადასახადები</h2>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- contact -->
+    <!-- contact -->
+
+    </main>
+    <footer class="bg-custom-footercolor w-full h-auto mt-20">
+        <div class="container flex flex-col-reverse justify-between px-6 py-10 mx-auto space-y-8 md:flex-row md:space-y-0">
+            <div class="h-auto flex flex-column-reverse items-center justify-between space-y-12 md:flex-col md:space-y-0 md:items-start">
+                <div class="flex flex-col ">
+                    <figure class="w-24 h-13">
+                        <img src="/img/zoomitwhite.png" class="h-full w-full" alt="">
+                    </figure>
+                    <div class="flex justify-center space-x-4 footer_div ">
+                        <p class="text-white mt-4">გამოგვყევი აქ: </p>
+                        <a href="" class="mt-4 w-8 h-8 bg-white flex rounded-full items-center justify-center">
+                            <i class="fa-brands fa-facebook fa-l text-custom-buttoncolor"></i>
+                        </a>
+                        <a href="" class="mt-4 w-8 h-8 bg-white flex rounded-full items-center justify-center">
+                            <i class="fa-brands fa-instagram fa-l text-custom-buttoncolor"></i>
+                        </a>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="flex justify-around space-x-32">
+                <div class="flex flex-col space-y-3 text-white">
+                    <h3 class="text-white text-2xl">ჩვენს შესახებ</h3>
+                    <hr class="w-12 h-0.5 bg-custom-buttoncolor border-none">
+                    <a href="" class="hover:text-brightRed flex   items-center text-lg"><hr class="w-2 h-2 bg-custom-buttoncolor mr-3 border-none">ჩვენს შესახებ</a>
+                    <a href="" class="hover:text-brightRed flex   items-center text-lg"><hr class="w-2 h-2 bg-custom-buttoncolor mr-3 border-none">ჩვენს შესახებ</a>
+
+                </div>
+            </div>
+            <div class="flex justify-around space-x-32">
+                <div class="flex flex-col space-y-3 text-white">
+                    <h3 class="text-white text-2xl">რესურსები</h3>
+                    <hr class="w-12 h-0.5 bg-custom-buttoncolor border-none">
+                    <a href="" class="hover:text-brightRed flex   items-center text-lg"><hr class="w-2 h-2 bg-custom-buttoncolor mr-3 border-none">მთავარი</a>
+                    <a href="" class="hover:text-brightRed flex  items-center text-lg"><hr class="w-2 h-2 bg-custom-buttoncolor mr-3 border-none">კონტაქტი</a>
+                    <a href="" class="hover:text-brightRed flex   items-center text-lg"><hr class="w-2 h-2 bg-custom-buttoncolor mr-3 border-none">წესები და პირობები </a>
+                    <a href="" class="hover:text-brightRed flex   items-center text-lg w-2"><hr class="w-2 h-2 bg-custom-buttoncolor mr-3 border-none">კონფიდენციალურობის<br> პოლიტიკა </a>
+                </div>
+            </div>
+            <div class="flex justify-around space-x-32">
+                <div class="flex flex-col space-y-3 text-white">
+                    <h3 class="text-white text-2xl">საიტის ინფორმაცია</h3>
+                    <hr class="w-12 h-0.5 bg-custom-buttoncolor border-none">
+                    <div class="flex">
+                        <i class="fa-solid fa-message fa-lg text-white mt-5"></i>
+                        <div class="flex flex-col text-white ml-2">
+                            <h4 class="text-lg">მეილი:</h4>
+                            <span><a href="">info@zoomit.ge</a></span>
+                        </div>
+                    </div>
+                    <div class="flex">
+                        <i class="fa-solid fa-phone text-white fa-lg mt-5"></i>
+                        <div class="flex flex-col text-white ml-2">
+                            <h4 class="text-lg">ტელეფონის ნომერი:</h4>
+                            <span><a href="">599336690</a></span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="index.js"></script>
+</body>
+
+  
+</html>
